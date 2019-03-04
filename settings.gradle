@@ -1,0 +1,4 @@
+rootProject.name = 'web-testing'
+include 'desktop-web'
+include 'mobile-web'
+

@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'io.github.phoby'
+version '1.0-SNAPSHOT'
+
+// 기본 task 지정
+defaultTasks 'clean', 'test'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'com.codeborne', name: 'selenide', version: '5.2.0'
+}
